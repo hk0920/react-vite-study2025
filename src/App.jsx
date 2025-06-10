@@ -1,13 +1,11 @@
-
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Navigation from './components/Navigation';
-import Week1 from './components/Week1';
-import Week2 from './components/Week2';
-import Week3 from './components/Week3';
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import Week1 from "./components/week1";
+import Week2 from "./components/week2";
+import Week3 from "./components/week3";
+import "./app.css";
 
 function App() {
-
   return (
     <BrowserRouter>
       <div id="wrap">
@@ -18,9 +16,8 @@ function App() {
           <Route path="/effect" element={<Week3 />} index />
         </Routes>
       </div>
-    </BrowserRouter> 
-   
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
