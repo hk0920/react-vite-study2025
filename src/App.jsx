@@ -12,8 +12,8 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Week1 />} index />
-          <Route path="/state" element={<Week2 />} index />
-          <Route path="/effect" element={<Week3 />} index />
+          <Route path="/state" element={<Week2 />} />
+          <Route path="/effect" element={<Week3 />} />
         </Routes>
       </div>
     </BrowserRouter>
