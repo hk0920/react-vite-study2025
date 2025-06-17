@@ -1,12 +1,23 @@
-const Tab = ({ tabs }) => {
+import { useState } from "react";
+const TabChip = ({ data }) => {
+  const { sdBrandName, brandLogoImage } = data || {};
+  const { offImageUrl, onImageUrl } = brandLogoImage;
+
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <div className="box__tab">
+    <button type="button" className="button__chip">
+      <img src={isActive ? onImageUrl : offImageUrl} alt={sdBrandName} />
+    </button>
+  );
+};
+
+const Tab = ({ tabs }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  return (
+    <div className="box__chip-group brand-type">
       {tabs.map((tab, idx) => {
-        return (
-          <button type="button" className="button__tab" key={`tab-${idx}`}>
-            <img src={tab.imgUrl} alt={tab.text} />
-          </button>
-        );
+        return <TabChip data={tab} key={`brand-chip-${idx}`} />;
       })}
     </div>
   );

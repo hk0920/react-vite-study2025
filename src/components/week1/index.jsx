@@ -4,6 +4,7 @@ import ItemCard from "./ItemCard/ItemCard";
 import Title from "./Title/Title";
 import data from "./dummyData/dummyData";
 import { useEffect, useState } from "react";
+import { useExternalCss } from "../../App";
 
 const Week1 = () => {
   const [windowX, setWindowX] = useState(window.innerWidth);
@@ -24,6 +25,11 @@ const Week1 = () => {
       setDevices(e.target.innerWidth);
     });
   }, [isPC]);
+
+  useExternalCss([
+    "//script.gmarket.co.kr/starro/desktop/css/best/best.css",
+    "//script.gmarket.co.kr/starro/mobile/css/best/best.css",
+  ]);
 
   return (
     <div className="box__inner">
