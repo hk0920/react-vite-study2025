@@ -1,0 +1,215 @@
+.box__best-top {
+  .button__tooptip {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid red;
+    border-radius: 50%;
+  }
+}
+@media all and (max-width: 768px) {
+  .box__best-top {
+    display: none;
+  }
+}
+@media all and (max-width: 1200px) {
+  .box__best-top {
+    min-width: 100%;
+    .box__best-title {
+      width: 100%;
+    }
+  }
+}
+
+.box__navigation {
+  background-color: var(--pointColor);
+  border-bottom: 1px solid #eee;
+  .box__inner {
+    display: flex;
+  }
+  .link {
+    flex: 1;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+    &.active {
+      font-weight: bold;
+      color: var(--pointColor);
+      background-color: #fff;
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  .box__navigation {
+    .link {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+.box__filter-wrap {
+  .box__category-filter {
+    .box__category-inner {
+      padding: 20px 0 30px;
+      .list__category-filter {
+        justify-content: left;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: absolute;
+        top: calc(50% - 25px);
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border: 1px solid red;
+      }
+      .swiper-button-next {
+        left: auto;
+        right: 0;
+      }
+      .swiper-button-disabled {
+        display: none;
+      }
+    }
+  }
+}
+@media all and (max-width: 1200px) {
+  .box__best-list {
+    min-width: 320px;
+    .list__best {
+      width: 100%;
+      max-width: 768px;
+      .list-item {
+        width: calc(100% / 4);
+        margin-right: 0;
+        .gds-nudging-label {
+          white-space: nowrap;
+        }
+      }
+      .list-item-rank1 {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        text-align: center;
+        .box__thumbnail {
+          max-width: 300px;
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .box__filter-wrap {
+    .box__category-filter {
+      .box__category-inner {
+        width: 100%;
+        .swiper {
+          width: 100%;
+          max-width: 768px;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  .box__filter-wrap {
+    .box__category-filter {
+      padding: 12px 6px 5px;
+      border-bottom: 1px solid #eee;
+      .box__category-inner {
+        width: 100%;
+        padding: 20px 30px 30px;
+      }
+
+      .list__category-filter {
+        .list-item {
+          position: relative;
+          width: 62px !important;
+          margin: 0 2px !important;
+        }
+      }
+      .link__category {
+        display: block;
+        height: 100%;
+        text-align: center;
+
+        .box__thumbnail {
+          position: relative;
+          display: block;
+          width: 44px;
+          height: 44px;
+          margin: 0 auto 2px;
+          border-radius: 50%;
+          overflow: hidden;
+          .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .text__category {
+          position: relative;
+          left: calc(50% - 32px);
+          color: #222;
+          font-size: 12px;
+          line-height: 28px;
+        }
+        &.link__category--active {
+          .box__thumbnail {
+            &:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: block;
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              border: 2px solid var(--pointColor);
+              box-sizing: border-box;
+            }
+          }
+          .text__category {
+            color: var(--pointColor);
+          }
+        }
+      }
+    }
+  }
+
+  .box__best-list {
+    .list__best {
+      .list-item {
+        width: calc(100% / 2);
+        padding: 16px 8px 0 8px;
+        box-sizing: border-box;
+        .box__thumbnail {
+          width: 100%;
+          height: auto;
+          padding-bottom: 100%;
+          .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+      .list-item-rank1 {
+        width: 100%;
+        .box__thumbnail {
+          padding-bottom: 0;
+          .image {
+            position: relative;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.box__scroll-wrap {
+  position: relative;
+  max-width: 600px;
+  height: 600px;
+  margin: 40px auto;
+  border: 1px solid var(--pointColor);
+  .text__desc {
+    position: absolute;
+    top: -20px;
+    right: 0;
+  }
+  .box__scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--pointColor);
+  }
+}
+.box__scroll {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  background: var(--pointColor);
+}
+.box__inner:has(.box__scroll) {
+  position: relative;
+  padding-top: 100px;
+}
+.box__inner:has(.list__terms) {
+  min-height: 1800px;
+}
+.list__terms {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  .box__term-title {
+    position: relative;
+    padding: 20px 16px;
+    border-bottom: 1px solid #e5e5e5;
+    .form__input {
+      margin-right: 4px;
+    }
+    .button__detail {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      font-size: 12px;
+      transform: translateY(-50%);
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-left: 10px;
+        border-top: 2px solid #e5e5e5;
+        border-right: 2px solid #e5e5e5;
+        transform: rotate(135deg);
+        vertical-align: top;
+      }
+      &.button__detail--active:after {
+        vertical-align: bottom;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .box__term-content {
+    display: none;
+    padding: 20px;
+    font-size: 14px;
+    background: #f5f5f5;
+  }
+}

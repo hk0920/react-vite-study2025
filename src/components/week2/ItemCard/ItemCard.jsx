@@ -1,3 +1,4 @@
+import ItemInfo from "./ItemInfo";
 import ItemThumbnail from "./ItemThumbnail";
 
 const ItemCard = ({ data }) => {
@@ -21,6 +22,8 @@ const ItemCard = ({ data }) => {
     tagLabels,
   } = data || {};
 
+  console.log(data);
+
   return (
     <>
       <ItemThumbnail
@@ -29,6 +32,7 @@ const ItemCard = ({ data }) => {
         itemName={itemName}
         tagLabels={tagLabels}
       />
+      <ItemInfo data={data} />
     </>
   );
 };

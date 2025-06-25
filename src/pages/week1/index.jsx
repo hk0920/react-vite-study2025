@@ -1,10 +1,11 @@
 import clsx from "clsx";
-import CategoryFilter from "./Filter/CategoryFilter";
-import ItemCard from "./ItemCard/ItemCard";
-import Title from "./Title/Title";
-import data from "./dummyData/dummyData";
+import CategoryFilter from "../../components/week1/Filter/CategoryFilter";
+import ItemCard from "../../components/week1/ItemCard/ItemCard";
+import Title from "../../components/week1/Title/Title";
+import data from "../../components/week1/dummyData/dummyData";
 import { useEffect, useState } from "react";
 import { useExternalCss } from "../../App";
+import "./css/index.css";
 
 const Week1 = () => {
   const [windowX, setWindowX] = useState(window.innerWidth);

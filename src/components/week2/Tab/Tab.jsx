@@ -7,7 +7,11 @@ const TabChip = ({ data }) => {
 
   return (
     <button type="button" className="button__chip">
-      <img src={isActive ? onImageUrl : offImageUrl} alt={sdBrandName} />
+      <img
+        src={isActive ? onImageUrl : offImageUrl}
+        alt={sdBrandName}
+        className="image__brand-logo"
+      />
     </button>
   );
 };

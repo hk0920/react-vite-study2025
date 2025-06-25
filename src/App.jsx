@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navigation from "./components/Navigation";
-import Week1 from "./components/week1";
-import Week2 from "./components/week2";
-import Week3 from "./components/week3";
-import "./app.css";
 import { useEffect } from "react";
+import Navigation from "./components/Navigation";
+import Week1 from "./pages/week1";
+import Week2 from "./pages/week2";
+import Week3 from "./pages/week3";
+import "./app.css";
 
 export const useExternalCss = (urls) => {
   useEffect(() => {
@@ -14,7 +14,6 @@ export const useExternalCss = (urls) => {
       const link = document.createElement("link");
       link.rel = "stylesheet";
       link.href = url;
-      link.dataset.dynamic = "true"; // 식별용
       document.head.prepend(link);
       links.push(link);
     });

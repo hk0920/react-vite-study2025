@@ -1,11 +1,14 @@
 import { useExternalCss } from "../../App";
-import Tab from "./Tab/Tab";
-import SubTitle from "./SubTitle/SubTitle";
-import dummyData from "./dummyData/dummyData";
-import ItemCard from "./ItemCard/ItemCard";
+import Tab from "../../components/week2/Tab/Tab";
+import SubTitle from "../../components/week2/SubTitle/SubTitle";
+import dummyData from "../../components/week2/dummyData/dummyData";
+import ItemCard from "../../components/week2/ItemCard/ItemCard";
+import "./css/index.css";
 
 const Week2 = () => {
   useExternalCss([
+    "//script.gmarket.co.kr/pc/css/application/kr/smilefresh/app.css",
+    "//script.gmarket.co.kr/starro/desktop/css/gnb/gnb.css",
     "//script.gmarket.co.kr/starro/desktop/css/smilefresh/smilefresh.css",
   ]);
 
@@ -13,8 +16,6 @@ const Week2 = () => {
     sdBrandName: item.sdBrandName,
     brandLogoImage: item.brandLogoImage,
   }));
-
-  console.log(brandTabs);
 
   return (
     <>
@@ -30,7 +31,11 @@ const Week2 = () => {
       <div className="box__itemcard-slide">
         <ul className="box__items-list">
           {dummyData.sdBrandItemCatalogs.map((data, idx) => {
-            return <ItemCard data={data.items} key={`itemcard-${idx}`} />;
+            return (
+              <li className="list-item">
+                <ItemCard data={data.items} key={`itemcard-${idx}`} />;
+              </li>
+            );
           })}
         </ul>
       </div>
